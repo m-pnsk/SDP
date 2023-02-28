@@ -1,6 +1,6 @@
 package org.example.factoryMethod.creators;
 
-import org.example.factoryMethod.products.Parsel;
+import org.example.factoryMethod.products.Parcel;
 
 public abstract class ParcelFactory {
     private String type;
@@ -12,5 +12,5 @@ public abstract class ParcelFactory {
         return type;
     }
 
-    public abstract Parsel sendParsel();
+    public abstract Parcel sendParcel();
 }

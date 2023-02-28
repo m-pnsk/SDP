@@ -1,7 +1,7 @@
 package org.example.factoryMethod;
 
 import org.example.factoryMethod.creators.*;
-import org.example.factoryMethod.products.Parsel;
+import org.example.factoryMethod.products.Parcel;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,11 +10,11 @@ public class Main {
         ParcelFactory packet = new CreatorPacket("packet");
 
         // Надсилаємо посилки
-        Parsel ltr = letter.sendParsel();
-        Parsel pct = packet.sendParsel();
+        Parcel ltr = letter.sendParcel();
+        Parcel pct = packet.sendParcel();
 
         // Перевіряємо чи коректно працює поштове відділення :)
-        System.out.print("В даній посилці має міститися лист. Відкриваємо... -> В посилці: "); ltr.typeOfParsel();
-        System.out.print("В даній посилці має міститися пакет. Відкриваємо... -> В посилці: "); pct.typeOfParsel();
+        System.out.print("В даній посилці має міститися лист. Відкриваємо... -> В посилці: "); ltr.typeOfParcel();
+        System.out.print("В даній посилці має міститися пакет. Відкриваємо... -> В посилці: "); pct.typeOfParcel();
     }
 }

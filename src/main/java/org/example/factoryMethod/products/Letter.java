@@ -1,9 +1,9 @@
 package org.example.factoryMethod.products;
 
-public class Letter implements Parsel {
+public class Letter implements Parcel {
 
     @Override
-    public void typeOfParsel() {
+    public void typeOfParcel() {
         System.out.println("Letter");
     }
 }

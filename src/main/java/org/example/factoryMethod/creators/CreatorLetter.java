@@ -1,7 +1,7 @@
 package org.example.factoryMethod.creators;
 
 import org.example.factoryMethod.products.Letter;
-import org.example.factoryMethod.products.Parsel;
+import org.example.factoryMethod.products.Parcel;
 
 public class CreatorLetter extends ParcelFactory {
     public CreatorLetter(String type) {
@@ -9,7 +9,7 @@ public class CreatorLetter extends ParcelFactory {
     }
 
     @Override
-    public Parsel sendParsel() {
+    public Parcel sendParcel() {
         return new Letter();
     }
 }
