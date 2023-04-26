@@ -14,7 +14,9 @@ public class Main {
         Parcel pct = packet.sendParcel();
 
         // Перевіряємо чи коректно працює поштове відділення :)
-        System.out.print("В даній посилці має міститися лист. Відкриваємо... -> В посилці: "); ltr.typeOfParcel();
-        System.out.print("В даній посилці має міститися пакет. Відкриваємо... -> В посилці: "); pct.typeOfParcel();
+        System.out.print("В даній посилці має міститися лист. Відкриваємо... -> В посилці: ");
+        ltr.typeOfParcel();
+        System.out.print("В даній посилці має міститися пакет. Відкриваємо... -> В посилці: ");
+        pct.typeOfParcel();
     }
 }
