@@ -1,5 +1,6 @@
 package org.example.builder;
 
+import org.example.builder.printer.ReceiptPrinter;
 import org.example.builder.taskDetails.Item;
 import org.example.builder.taskDetails.PaymentMethod;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderBuilder implements Builder{
-    private List<Item> items;
+    private final List<Item> items;
     private String address;
     private PaymentMethod paymentMethod;
 
@@ -34,8 +35,10 @@ public class OrderBuilder implements Builder{
     }
 
     @Override
-    public Order build() {
-        return new Order(items, address, paymentMethod);
+    public Order build(ReceiptPrinter receiptPrinter) {
+        Order newOrder = new Order(items, address, paymentMethod);
+        receiptPrinter.print(newOrder);
+        return newOrder;
     }
 
 }

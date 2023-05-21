@@ -6,9 +6,9 @@ import org.example.builder.taskDetails.PaymentMethod;
 import java.util.List;
 
 public class Order {
-    private List<Item> items;
-    private String address;
-    private PaymentMethod paymentMethod;
+    private final List<Item> items;
+    private final String address;
+    private final PaymentMethod paymentMethod;
 
     public Order(List<Item> items, String address, PaymentMethod paymentMethod) {
         this.items = items;
